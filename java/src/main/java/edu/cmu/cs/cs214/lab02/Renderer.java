@@ -3,17 +3,23 @@ package edu.cmu.cs.cs214.lab02;
 import edu.cmu.cs.cs214.lab02.shapes.*;
 
 public class Renderer {
-    public Rectangle rectangle;
-    
-    Renderer(Rectangle rectangle) {
-        this.rectangle = rectangle;
+    /**
+     * The shape to be rendered
+     */
+    private Shape shape;
+
+    /**
+     * Constructor with a shape to be rendered
+     * @param shape the shape to be rendered
+     */
+    public Renderer(Shape shape) {
+        this.shape = shape;
     }
 
-    void draw() {
-        double area = rectangle.getArea();
-
-        // assume implementation
-
-        System.out.println("Shape printed\n" + "Its area is " + area);
+    /**
+     * Prints the shape and its area to the console
+     */
+    public void draw() {
+        System.out.println("Shape printed\n" + "Its area is " + shape.getArea());
     }
 }
